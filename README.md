@@ -1,11 +1,11 @@
-# 🌐 Anaswara K U - Portfolio
+# Anaswara K U - Portfolio
 
 Welcome to my personal portfolio website.
 
-## 👩 About Me
-I am Anaswara K U, a Computer Science and Engineering student at KVG College of Engineering, Sullia. I am passionate about software development, web development, and problem solving.
+## About Me
+I am a Computer Science and Engineering student at KVG College of Engineering, Sullia. I am passionate about software development, web development, and problem solving.
 
-## 💻 Skills
+## Skills
 - Java
 - Python
 - C
@@ -16,14 +16,13 @@ I am Anaswara K U, a Computer Science and Engineering student at KVG College of 
 - MySQL
 - DBMS
 
-## 📂 Projects
+## Projects
 - Task Management System
 - Intelligent Voice Feedback Blind Stick (Ongoing)
 
-## 🔗 Live Portfolio
+## Live Portfolio
 https://anaswaraku27.github.io/portfolio/
 
-## 📧 Contact
+## Contact
 Email: anaswaraku27@gmail.com
-
 GitHub: https://github.com/anaswaraku27
