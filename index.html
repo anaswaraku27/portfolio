@@ -1,67 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Anaswara K U | Portfolio</title>
 
 <style>
-body{
+    *{
     margin:0;
-    font-family:Arial,sans-serif;
-    background:#f4f7fc;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f5f7fb;
     color:#333;
-    line-height:1.6;
+    line-height:1.7;
 }
 
 header{
-    background:#0d6efd;
+    background:linear-gradient(135deg,#0d6efd,#4f8dfd);
     color:white;
     text-align:center;
-    padding:40px 20px;
+    padding:60px 20px;
+    border-bottom-left-radius:30px;
+    border-bottom-right-radius:30px;
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
 }
 
 img{
-    width:170px;
-    height:170px;
+    width:180px;
+    height:180px;
     border-radius:50%;
-    border:5px solid white;
-    box-shadow:0 8px 20px rgba(0,0,0,0.2);
+    border:6px solid white;
     object-fit:cover;
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+    transition:.4s;
+}
+
+img:hover{
+    transform:scale(1.08);
+}
+
+h1{
+    margin-top:20px;
+    font-size:42px;
+    letter-spacing:1px;
+}
+
+.subtitle{
+    font-size:20px;
+    margin-top:10px;
+    opacity:.95;
+}
+
+.header-buttons{
+    margin-top:25px;
+}
+
+.header-buttons a{
+    display:inline-block;
+    margin:8px;
+    padding:12px 24px;
+    background:white;
+    color:#0d6efd;
+    border-radius:30px;
+    text-decoration:none;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.header-buttons a:hover{
+    background:#e9f2ff;
+    transform:translateY(-3px);
 }
 
 section{
     width:85%;
-    margin:30px auto;
+    max-width:1000px;
+    margin:35px auto;
 }
 
 .card{
     background:white;
     padding:25px;
-    border-radius:15px;
-    box-shadow:0 4px 15px rgba(0,0,0,0.1);
-    transition:0.3s;
+    border-radius:18px;
+    box-shadow:0 5px 18px rgba(0,0,0,.1);
+    transition:.4s;
 }
 
 .card:hover{
-    transform:translateY(-5px);
-    box-shadow:0 8px 25px rgba(0,0,0,0.2);
-}
-
-h1{
-    margin-top:15px;
-    font-size:38px;
+    transform:translateY(-8px);
+    box-shadow:0 15px 35px rgba(0,0,0,.18);
 }
 
 h2{
     color:#0d6efd;
+    margin-bottom:15px;
     border-bottom:2px solid #0d6efd;
     padding-bottom:8px;
-    margin-bottom:15px;
-}
-
-h3{
-    color:#333;
 }
 
 ul{
@@ -72,29 +118,44 @@ li{
     margin-bottom:10px;
 }
 
-a{
-    color:#0d6efd;
-    text-decoration:none;
-    font-weight:bold;
+.skills{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
 }
 
-a:hover{
-    text-decoration:underline;
+.skills span{
+    background:#0d6efd;
+    color:white;
+    padding:10px 18px;
+    border-radius:25px;
+    font-size:15px;
+    transition:.3s;
+}
+
+.skills span:hover{
+    background:#084298;
+    transform:scale(1.05);
 }
 
 button{
     background:#0d6efd;
     color:white;
     border:none;
-    padding:12px 24px;
+    padding:12px 22px;
     border-radius:8px;
-    font-size:16px;
     cursor:pointer;
-    transition:0.3s;
+    font-size:16px;
+    transition:.3s;
 }
 
 button:hover{
     background:#084298;
+}
+
+a{
+    color:#0d6efd;
+    text-decoration:none;
 }
 
 footer{
@@ -104,122 +165,183 @@ footer{
     padding:20px;
     margin-top:40px;
 }
+
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+header,
+section{
+    animation:fadeUp .8s ease;
+}
     </style>
+
 </head>
 
 <body>
 
 <header>
 
-<img src="profile.jpeg">
+<img src="profile.jpeg" alt="Anaswara K U">
 
 <h1>Anaswara K U</h1>
 
-<h3>Computer Science & Engineering Student</h3>
+<p class="subtitle">
+Computer Science & Engineering Student
+</p>
+
+<p>
+Passionate about Java, Web Development, Problem Solving, and Software Development.
+</p>
+
+<div class="header-buttons">
+
+<a href="https://github.com/anaswaraku27" target="_blank">
+GitHub
+</a>
+
+<a href="#projects">
+Projects
+</a>
+
+<a href="#contact">
+Contact
+</a>
+
+</div>
 
 </header>
-<section>
+    <section id="about">
 
 <div class="card">
 
-<h2> About Me</h2>
+<h2>About Me</h2>
 
 <p>
-Hello! I'm <b>Anaswara K U</b>, a Computer Science and Engineering student at
-KVG College of Engineering, Sullia.
-
-I am passionate about software development, Java, Python, Web Development,
-and problem solving. I enjoy learning new technologies and building projects
-that improve my technical skills.
-
-My goal is to become a Software Engineer and contribute to innovative
-technology solutions.
+I am a Computer Science and Engineering student with a strong interest in software development, Java programming, web development, and problem solving. I enjoy learning new technologies and building projects that improve my practical skills.
 </p>
 
 </div>
 
 </section>
-<section>
+
+<section id="skills">
 
 <div class="card">
 
-<h2> Skills</h2>
+<h2>Technical Skills</h2>
 
-<ul>
-<li>Java</li>
-<li>Python</li>
-<li>C</li>
-<li>HTML</li>
-<li>CSS</li>
-<li>JavaScript</li>
-<li>React</li>
-<li>MySQL</li>
-<li>DBMS</li>
-<li>DSA</li>
-</ul>
+<div class="skills">
+
+<span>Java</span>
+
+<span>Python</span>
+
+<span>C</span>
+
+<span>HTML</span>
+
+<span>CSS</span>
+
+<span>JavaScript</span>
+
+<span>React</span>
+
+<span>MySQL</span>
+
+<span>DBMS</span>
+
+<span>DSA</span>
+
+<span>Git</span>
+
+<span>GitHub</span>
+
+</div>
 
 </div>
 
 </section>
-
-<section>
+    <section id="projects">
 
 <div class="card">
 
 <h2>Projects</h2>
 
-<h3>Task Management System</h3>
+<h3>📋 Task Management System</h3>
 
 <p>
-Developed a web-based Task Management System to help users create, organize, update, and manage daily tasks efficiently.
+A web-based application developed to help users create, organize, update, and manage daily tasks efficiently.
 </p>
 
-<h3>Intelligent Voice Feedback Blind Stick</h3>
+<p><strong>Technologies:</strong> HTML, CSS, JavaScript</p>
+
+<br>
+
+<h3>🦯 Intelligent Voice Feedback Blind Stick</h3>
 
 <p>
-An ongoing smart assistive project designed to help visually impaired people navigate safely using sensors and voice feedback.
+An assistive smart stick designed for visually impaired people using sensors and voice feedback to detect obstacles and improve safe navigation.
 </p>
+
+<p><strong>Technologies:</strong> Arduino, Sensors, Embedded Systems</p>
 
 </div>
 
-</section>
-    <section>
+    </section>
+    <section id="education">
 
 <div class="card">
 
 <h2>Education</h2>
 
-<p><strong>Bachelor of Engineering (B.E.)</strong></p>
+<h3>Bachelor of Engineering (B.E.)</h3>
 
-<p>Computer Science and Engineering</p>
+<p><strong>Computer Science and Engineering</strong></p>
 
 <p>KVG College of Engineering, Sullia</p>
 
 <p>Expected Graduation: 2027</p>
 
+<p>CGPA: 7.2</p>
+
 </div>
 
 </section>
-    <section>
+
+<section id="certifications">
 
 <div class="card">
 
 <h2>Certifications</h2>
 
 <ul>
+
 <li>Enterprise Design Thinking Practitioner – IBM SkillsBuild</li>
+
 <li>Introduction to Java – Infosys Springboard</li>
+
 <li>Class Structure and Encapsulation – Skillsoft</li>
-<li>Graphic Design Internship (3 Months) – Completion Certificate</li>
+
+<li>Graphic Design Internship Completion Certificate (3 Months)</li>
+
 <li>DFPD-2 Online Quiz – My Bharat, Ministry of Youth Affairs & Sports</li>
+
 <li>Slogans of India Quiz – My Bharat, Ministry of Youth Affairs & Sports</li>
+
 </ul>
 
 </div>
 
 </section>
-
-<section>
+    <section id="achievements">
 
 <div class="card">
 
@@ -227,6 +349,7 @@ An ongoing smart assistive project designed to help visually impaired people nav
 
 <ul>
 <li>Selected as Graphic Design Intern – Internshala</li>
+<li>Completed 3-Month Graphic Design Internship</li>
 <li>Participant – She Innovates Hackathon</li>
 <li>Participant – NxtWave</li>
 </ul>
@@ -234,38 +357,76 @@ An ongoing smart assistive project designed to help visually impaired people nav
 </div>
 
 </section>
-    <section>
+
+<section id="contact">
 
 <div class="card">
 
 <h2>Contact</h2>
 
-<p><strong>Email:</strong>
-<a href="mailto:anaswaraku27@gmail.com">
-anaswaraku27@gmail.com
+<p><strong>Email:</strong> anaswaraku27@gmail.com</p>
+
+<p><strong>Phone:</strong> +91 9019050455</p>
+
+<p><strong>Location:</strong> Kodagu, Karnataka</p>
+
+<p>
+<strong>LinkedIn:</strong>
+<a href="https://www.linkedin.com/in/anaswara-k-u-b30428411?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank">
+View LinkedIn Profile
 </a>
 </p>
 
-<p><strong>GitHub:</strong>
+<p>
+<strong>GitHub:</strong>
 <a href="https://github.com/anaswaraku27" target="_blank">
 github.com/anaswaraku27
 </a>
 </p>
 
-<p><strong>Portfolio:</strong>
+<p>
+<strong>Portfolio:</strong>
 <a href="https://anaswaraku27.github.io/portfolio/" target="_blank">
-https://anaswaraku27.github.io/portfolio/
+anaswaraku27.github.io/portfolio
 </a>
 </p>
+
+<br>
+
+<a href="Anaswara_ATS_Resume.pdf" target="_blank">
+<button>📄 View Resume</button>
+</a>
+
+&nbsp;&nbsp;
+
+<a href="Anaswara_ATS_Resume.pdf" download>
+<button>⬇️ Download Resume</button>
+</a>
 
 </div>
 
 </section>
-    <footer>
 
-<p>&copy; 2026 Anaswara K U. All Rights Reserved.</p>
+<footer>
+
+<p><strong>Anaswara K U</strong></p>
+
+<p>Computer Science & Engineering Student</p>
+
+<p>Designed & Developed by Anaswara K U</p>
+
+<p>© 2026 All Rights Reserved.</p>
 
 </footer>
 
 </body>
+
 </html>
+
+
+
+
+
+
+
+
