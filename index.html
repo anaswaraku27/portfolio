@@ -1,19 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Anaswara K U | Portfolio</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
-
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
 
@@ -21,34 +18,135 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
+font-family:'Poppins',sans-serif;
 scroll-behavior:smooth;
 }
 
 body{
 
-font-family:'Poppins',sans-serif;
+background:#050816;
 
-background:linear-gradient(-45deg,#0f172a,#1e3a8a,#2563eb,#0f766e);
+color:white;
 
-background-size:400% 400%;
+overflow-x:hidden;
 
-animation:bgAnimation 15s ease infinite;
+}
+
+body::before{
+
+content:"";
+
+position:fixed;
+
+width:500px;
+
+height:500px;
+
+background:#5B21B6;
+
+border-radius:50%;
+
+filter:blur(170px);
+
+top:-180px;
+
+left:-150px;
+
+z-index:-2;
+
+}
+
+body::after{
+
+content:"";
+
+position:fixed;
+
+width:450px;
+
+height:450px;
+
+background:#2563EB;
+
+border-radius:50%;
+
+filter:blur(170px);
+
+bottom:-170px;
+
+right:-150px;
+
+z-index:-2;
+
+}
+
+nav{
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+padding:20px 9%;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+background:rgba(255,255,255,.05);
+
+backdrop-filter:blur(20px);
+
+z-index:1000;
+
+}
+
+.logo{
+
+font-size:28px;
+
+font-weight:800;
+
+letter-spacing:1px;
 
 color:white;
 
 }
 
-@keyframes bgAnimation{
+nav ul{
 
-0%{background-position:0% 50%;}
+display:flex;
 
-50%{background-position:100% 50%;}
+list-style:none;
 
-100%{background-position:0% 50%;}
+gap:35px;
 
 }
 
-header{
+nav ul li a{
+
+text-decoration:none;
+
+color:white;
+
+font-weight:500;
+
+transition:.3s;
+
+}
+
+nav ul li a:hover{
+
+color:#60A5FA;
+
+}
+
+.hero{
 
 min-height:100vh;
 
@@ -58,610 +156,62 @@ justify-content:center;
 
 align-items:center;
 
-padding:40px;
+padding:120px 10% 80px;
 
 }
 
-.hero{
-
-width:90%;
-
-max-width:1100px;
-
-background:rgba(255,255,255,.12);
-
-backdrop-filter:blur(15px);
-
-border-radius:25px;
-
-padding:50px;
-
-text-align:center;
-
-box-shadow:0 10px 40px rgba(0,0,0,.3);
-
-animation:fadeUp 1s ease;
-
-}
-
-.hero img{
-
-width:180px;
-
-height:180px;
-
-border-radius:50%;
-
-border:5px solid white;
-
-object-fit:cover;
-
-transition:.4s;
-
-}
-
-.hero img:hover{
-
-transform:scale(1.08);
-
-}
-
-.hero h1{
-
-font-size:48px;
-
-margin-top:20px;
-
-}
-
-.hero p{
-
-margin-top:12px;
-
-font-size:18px;
-
-opacity:.95;
-
-}
-
-.buttons{
-
-margin-top:30px;
-
-}
-
-.buttons a{
-
-display:inline-block;
-
-padding:14px 28px;
-
-margin:8px;
-
-background:white;
-
-color:#2563eb;
-
-text-decoration:none;
-
-font-weight:600;
-
-border-radius:30px;
-
-transition:.3s;
-
-}
-
-.buttons a:hover{
-
-transform:translateY(-5px);
-
-}
-
-section{
-
-padding:80px 10%;
-
-}
-
-.card{
-
-background:rgba(255,255,255,.12);
-
-backdrop-filter:blur(15px);
-
-border-radius:20px;
-
-padding:30px;
-
-margin-bottom:30px;
-
-box-shadow:0 10px 30px rgba(0,0,0,.2);
-
-animation:fadeUp 1s ease;
-
-}
-
-.card:hover{
-
-transform:translateY(-8px);
-
-transition:.4s;
-
-}
-
-h2{
-
-font-size:34px;
-
-margin-bottom:20px;
-
-}
-
-@keyframes fadeUp{
-
-from{
-
-opacity:0;
-
-transform:translateY(40px);
-
-}
-
-to{
-
-opacity:1;
-
-transform:translateY(0);
-
-}
-
-}
-.skills{
+.hero-box{
 
 display:flex;
 
-flex-wrap:wrap;
+justify-content:space-between;
 
-gap:15px;
+align-items:center;
 
-margin-top:20px;
+gap:60px;
 
-}
+width:100%;
 
-.skills span{
-
-background:#3b82f6;
-
-padding:12px 20px;
-
-border-radius:30px;
-
-font-weight:500;
-
-transition:.3s;
+max-width:1200px;
 
 }
 
-.skills span:hover{
+.left{
 
-background:white;
-
-color:#2563eb;
-
-transform:scale(1.08);
+flex:1;
 
 }
 
-.project{
+.right{
 
-margin-top:20px;
-
-padding:20px;
-
-border-left:5px solid #60a5fa;
-
-background:rgba(255,255,255,.08);
-
-border-radius:15px;
-
-}
-
-.project h3{
-
-margin-bottom:10px;
-
-}
-
-ul{
-
-padding-left:20px;
-
-}
-
-li{
-
-margin-bottom:12px;
-
-}
-
-.contact a{
-
-color:white;
-
-text-decoration:none;
-
-font-weight:600;
-
-}
-
-.contact a:hover{
-
-text-decoration:underline;
-
-}
-
-footer{
-
-text-align:center;
-
-padding:30px;
-
-background:rgba(0,0,0,.25);
-
-margin-top:40px;
-
-}
-
-.top{
-
-position:fixed;
-
-bottom:25px;
-
-right:25px;
-
-background:white;
-
-color:#2563eb;
-
-width:50px;
-
-height:50px;
-
-border-radius:50%;
+flex:1;
 
 display:flex;
 
 justify-content:center;
 
-align-items:center;
+}
 
-text-decoration:none;
+.right img{
 
-font-size:24px;
+width:350px;
 
-font-weight:bold;
+height:350px;
 
-box-shadow:0 10px 25px rgba(0,0,0,.3);
+border-radius:50%;
 
-transition:.3s;
+object-fit:cover;
+
+border:6px solid rgba(255,255,255,.3);
+
+box-shadow:0 0 60px rgba(96,165,250,.6);
+
+transition:.5s;
 
 }
 
-.top:hover{
+.right img:hover{
 
-transform:scale(1.15);
+transform:scale(1.05);
 
-}
-
-@media(max-width:768px){
-
-.hero h1{
-
-font-size:34px;
-
-}
-
-.hero{
-
-padding:30px;
-
-}
-
-section{
-
-padding:50px 8%;
-
-}
-
-.buttons a{
-
-display:block;
-
-margin:12px auto;
-
-}
-
-}
-
-</style>
-
-</head>
-
-<body>
-
-<header>
-
-<div class="hero">
-
-<img src="profile.jpeg" alt="Anaswara K U">
-
-<h1>Anaswara K U</h1>
-
-<p>Computer Science & Engineering Student</p>
-
-<p>
-Passionate about Java, Web Development, Problem Solving and Software Development.
-</p>
-
-<div class="buttons">
-
-<a href="https://github.com/anaswaraku27" target="_blank">GitHub</a>
-
-<a href="https://www.linkedin.com/in/anaswara-k-u-b30428411?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank">LinkedIn</a>
-
-<a href="Anaswara_ATS_Resume.pdf" target="_blank">Resume</a>
-
-</div>
-
-</div>
-
-</header>
-<section id="about">
-
-<div class="card">
-
-<h2> About Me</h2>
-
-<p>
-Hello! I'm <strong>Anaswara K U</strong>, a Computer Science and Engineering student with a passion for software development and continuous learning. I enjoy building practical projects, solving programming problems, and exploring new technologies. My interests include Java, web development, and creating solutions that have a positive real-world impact.
-</p>
-
-</div>
-
-</section>
-
-<section id="skills">
-
-<div class="card">
-
-<h2> Technical Skills</h2>
-
-<div class="skills">
-
-<span> Java</span>
-
-<span> Python</span>
-
-<span> C</span>
-
-<span> HTML</span>
-
-<span> CSS</span>
-
-<span> JavaScript</span>
-
-<span> React</span>
-
-<span> MySQL</span>
-
-<span> DBMS</span>
-
-<span> DSA</span>
-
-<span> Git</span>
-
-<span> GitHub</span>
-
-</div>
-
-</div>
-
-</section>
-  <section id="projects">
-
-<div class="card">
-
-<h2> Projects</h2>
-
-<div class="project">
-
-<h3> Task Management System</h3>
-
-<p>
-A responsive web application developed to help users create, organize, edit, and manage daily tasks efficiently with a clean and user-friendly interface.
-</p>
-
-<p><strong>Technologies:</strong> HTML, CSS, JavaScript</p>
-
-</div>
-
-<div class="project">
-
-<h3> Intelligent Voice Feedback Blind Stick</h3>
-
-<p>
-A smart assistive device designed for visually impaired people using sensors and voice feedback to detect obstacles and improve safe navigation.
-</p>
-
-<p><strong>Technologies:</strong> Arduino, Embedded C, Sensors</p>
-
-</div>
-
-<div class="project">
-
-<h3>Nap Time Landing Page</h3>
-
-<p>
-A modern and responsive landing page designed with an attractive user interface to provide a better browsing experience across different devices.
-</p>
-
-<p><strong>Technologies:</strong> HTML, CSS</p>
-
-</div>
-
-</div>
-
-</section>
-  <section id="education">
-
-<div class="card">
-
-<h2> Education</h2>
-
-<div class="project">
-
-<h3>Bachelor of Engineering (B.E.)</h3>
-
-<p><strong>Computer Science and Engineering</strong></p>
-
-<p>KVG College of Engineering, Sullia, Karnataka</p>
-
-<p>Expected Graduation: <strong>2027</strong></p>
-
-<p>Current CGPA: <strong>7.2</strong></p>
-
-</div>
-
-</div>
-
-</section>
-
-<section id="certifications">
-
-<div class="card">
-
-<h2> Certifications</h2>
-
-<div class="project">
-
-<ul>
-
-<li> Enterprise Design Thinking Practitioner – IBM SkillsBuild</li>
-
-<li> Introduction to Java – Infosys Springboard</li>
-
-<li> Class Structure and Encapsulation – Skillsoft</li>
-
-<li> Graphic Design Internship – 3 Months (Completion Certificate)</li>
-
-<li> DFPD-2 Online Quiz – My Bharat, Ministry of Youth Affairs & Sports</li>
-
-<li>🇮🇳 Slogans of India Quiz – My Bharat, Ministry of Youth Affairs & Sports</li>
-
-</ul>
-
-</div>
-
-</div>
-
-</section>
-  <section id="achievements">
-
-<div class="card">
-
-<h2> Achievements</h2>
-
-<div class="project">
-
-<ul>
-
-<li> Selected as Graphic Design Intern through Internshala</li>
-
-<li>Successfully completed a 3-Month Graphic Design Internship</li>
-
-<li> Participant – She Innovates Hackathon</li>
-
-<li> NxtWave Participant</li>
-
-</ul>
-
-</div>
-
-</div>
-
-</section>
-
-<section id="contact">
-
-<div class="card contact">
-
-<h2> Contact Me</h2>
-
-<p>📧 <strong>Email:</strong><br>
-<a href="mailto:anashwaraunnikrishnan@gmail.com">
-anashwaraunnikrishnan@gmail.com
-</a></p>
-
-<br>
-
-<p> <strong>Phone:</strong><br>
-<a href="tel:+919019054555">
-+91 9019054555
-</a></p>
-
-<br>
-
-<p> <strong>GitHub:</strong><br>
-<a href="https://github.com/anaswaraku27" target="_blank">
-github.com/anaswaraku27
-</a></p>
-
-<br>
-
-<p> <strong>LinkedIn:</strong><br>
-<a href="https://www.linkedin.com/in/anaswara-k-u-b30428411?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank">
-linkedin.com/in/anaswara-k-u-b30428411
-</a></p>
-
-<br>
-
-<p> <strong>Resume:</strong><br>
-<a href="Anaswara_ATS_Resume.pdf" target="_blank">
-View Resume
-</a>
-</p>
-
-</div>
-
-</section>
-  <footer>
-
-<p><strong>Anaswara K U</strong></p>
-
-<p>Computer Science & Engineering Student</p>
-
-<p>
-Thank you for visiting my portfolio. I am always eager to learn, build innovative projects, and explore new opportunities in software development.
-</p>
-
-<p style="margin-top:15px;">
-<a href="https://github.com/anaswaraku27" target="_blank">GitHub</a> |
-<a href="https://www.linkedin.com/in/anaswara-k-u-b30428411?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank">LinkedIn</a> |
-<a href="Anaswara_ATS_Resume.pdf" target="_blank">Resume</a>
-</p>
-
-<p style="margin-top:20px;">
-© 2026 Anaswara K U. All Rights Reserved.
-</p>
-
-</footer>
-
-<a href="#" class="top">↑</a>
-
-</body>
-
-</html>
-  
-  
+box-shadow:0 0 90px rgba(147,51,
