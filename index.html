@@ -232,3 +232,216 @@ box-shadow:0 0 90px rgba(147,51,234,.9);
     color:#d1d5db;
     margin-bottoom:35px;
   }
+.buttons{
+
+display:flex;
+
+gap:20px;
+
+flex-wrap:wrap;
+
+}
+
+.btn{
+
+display:inline-block;
+
+padding:15px 34px;
+
+background:linear-gradient(135deg,#3B82F6,#8B5CF6);
+
+color:white;
+
+text-decoration:none;
+
+font-weight:600;
+
+border-radius:50px;
+
+transition:.4s;
+
+box-shadow:0 10px 30px rgba(59,130,246,.4);
+
+}
+
+.btn:hover{
+
+transform:translateY(-6px);
+
+box-shadow:0 15px 40px rgba(139,92,246,.6);
+
+}
+
+.btn-outline{
+
+display:inline-block;
+
+padding:15px 34px;
+
+border:2px solid #60A5FA;
+
+color:white;
+
+text-decoration:none;
+
+font-weight:600;
+
+border-radius:50px;
+
+transition:.4s;
+
+}
+
+.btn-outline:hover{
+
+background:#60A5FA;
+
+transform:translateY(-6px);
+
+}
+
+section{
+
+padding:90px 10%;
+
+}
+
+.card{
+
+background:rgba(255,255,255,.08);
+
+backdrop-filter:blur(18px);
+
+border:1px solid rgba(255,255,255,.15);
+
+border-radius:25px;
+
+padding:35px;
+
+margin-bottom:35px;
+
+box-shadow:0 20px 40px rgba(0,0,0,.25);
+
+transition:.4s;
+
+}
+
+.card:hover{
+
+transform:translateY(-10px);
+
+}
+
+h2{
+
+font-size:40px;
+
+margin-bottom:25px;
+
+color:#60A5FA;
+
+}
+
+@media(max-width:900px){
+
+.hero-box{
+
+flex-direction:column-reverse;
+
+text-align:center;
+
+}
+
+.left h1{
+
+font-size:48px;
+
+}
+
+.right img{
+
+width:250px;
+
+height:250px;
+
+}
+
+nav{
+
+padding:18px 6%;
+
+}
+
+nav ul{
+
+display:none;
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<nav>
+
+<div class="logo">AKU</div>
+
+<ul>
+
+<li><a href="#about">About</a></li>
+
+<li><a href="#skills">Skills</a></li>
+
+<li><a href="#projects">Projects</a></li>
+
+<li><a href="#contact">Contact</a></li>
+
+</ul>
+
+</nav>
+
+<section class="hero">
+
+<div class="hero-box">
+
+<div class="left">
+
+<h3>👋 Hello, I'm</h3>
+
+<h1>Anaswara K U</h1>
+
+<p>
+Computer Science & Engineering student passionate about Java, Web Development, UI Design, and building real-world software solutions.
+</p>
+
+<div class="buttons">
+
+<a href="Anaswara_ATS_Resume.pdf" class="btn" target="_blank">
+📄 Resume
+</a>
+
+<a href="https://github.com/anaswaraku27" class="btn-outline" target="_blank">
+💻 GitHub
+</a>
+
+<a href="https://www.linkedin.com/in/anaswara-k-u-b30428411?utm_source=share_via&utm_content=profile&utm_medium=member_android" class="btn-outline" target="_blank">
+💼 LinkedIn
+</a>
+
+</div>
+
+</div>
+
+<div class="right">
+
+<img src="profile.jpeg" alt="Anaswara K U">
+
+</div>
+
+</div>
+
+</section>
